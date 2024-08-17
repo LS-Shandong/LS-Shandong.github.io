@@ -1,11 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>LS-Shandong 的博客</title>
-    <link>//localhost:1313/</link>
-    <description>LS-Shandong 的博客</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 17 Aug 2024 12:21:02 &#43;0800</lastBuildDate>
-      <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
+    <title>Latex - 标签 - LS-Shandong 的博客</title>
+    <link>//localhost:1313/tags/latex/</link>
+    <description>Latex - 标签 | LS-Shandong 的博客</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 17 Aug 2024 12:21:02 &#43;0800</lastBuildDate><atom:link href="//localhost:1313/tags/latex/" rel="self" type="application/rss+xml" /><item>
   <title>Arch Linux 上 LaTex 环境的安装与配置</title>
   <link>//localhost:1313/posts/2024-8-17-1/</link>
   <pubDate>Sat, 17 Aug 2024 12:21:02 &#43;0800</pubDate>
@@ -33,24 +31,6 @@
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
 </h3><p>要启用 XeTex 以获得 Unicode 和现代字体技术支持,转至 <em><strong>选项 &gt; 设置TeXstudio &gt; 构建 &gt; 默认编译器</strong></em>。选择 <em>XeTex</em> 即可。</p>]]></description>
-</item>
-<item>
-  <title>在 Linux 上使用无线网卡（网卡基于RTL8188GU芯片）</title>
-  <link>//localhost:1313/posts/2024-8-15-1/</link>
-  <pubDate>Thu, 15 Aug 2024 13:29:43 &#43;0800</pubDate>
-  <author>LS-Shandong</author>
-  <guid>//localhost:1313/posts/2024-8-15-1/</guid>
-  <description><![CDATA[<p>我的网卡为<strong>迅捷150UH</strong>，我准备在我的 Arch Linux 上使用之。</p>
-<p>可运行 <code>lsusb</code> 命令以查询此网卡之芯片型号。lsusb 命令由软件包 <code>usbutils</code> 提供。</p>
-<pre><code>$ lsusb
-</code></pre>
-<p>经查询，我的无线网卡芯片型号为 <strong>RTL8188GU</strong>，<code>linux-firmware</code>软件包中已包含驱动程序 <code>rtl8xxxu</code> ，这一般无需手动装载，要装载：</p>
-<pre><code># modprobe rtl8xxxu
-</code></pre>
-<p>但是，我的无线网卡基于 RTL8188GU，需要安装 <code>usb_modeswitch</code> 以将其切换至 Wifi 模式（这个网络上资料不多） 。</p>
-<pre><code># pacman -S usb_modeswitch
-</code></pre>
-<p>无线网卡已可使用。</p>]]></description>
 </item>
 </channel>
 </rss>

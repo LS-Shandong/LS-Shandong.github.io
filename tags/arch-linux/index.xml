@@ -1,11 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>LS-Shandong 的博客</title>
-    <link>//localhost:1313/</link>
-    <description>LS-Shandong 的博客</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 17 Aug 2024 12:21:02 &#43;0800</lastBuildDate>
-      <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
+    <title>Arch Linux - 标签 - LS-Shandong 的博客</title>
+    <link>//localhost:1313/tags/arch-linux/</link>
+    <description>Arch Linux - 标签 | LS-Shandong 的博客</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 17 Aug 2024 12:21:02 &#43;0800</lastBuildDate><atom:link href="//localhost:1313/tags/arch-linux/" rel="self" type="application/rss+xml" /><item>
   <title>Arch Linux 上 LaTex 环境的安装与配置</title>
   <link>//localhost:1313/posts/2024-8-17-1/</link>
   <pubDate>Sat, 17 Aug 2024 12:21:02 &#43;0800</pubDate>

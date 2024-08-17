@@ -1,6 +1,6 @@
 # 关于
 
-## LS-Shandong
+## 关于 LS-Shandong
 
 我热爱戏曲。
 
@@ -8,11 +8,13 @@
 
 我热爱阅读和收藏古籍与旧书等。
 
-## ls-shandong.github.io
+## 关于 ls-shandong.github.io
 
-网站由 [hugo](https://gohugo.io) 强力驱动，使用 [FixIt](https://fixit.lruihao.cn/zh-cn/) 主题，使用 [Giscus](https://giscus.app/zh-CN) 评论系统
+网站由 [Hugo](https://gohugo.io) 强力驱动，使用 [FixIt](https://fixit.lruihao.cn/zh-cn/) 主题，使用 [Giscus](https://giscus.app/zh-CN) 评论系统。
 
-如果您的设备安装了京华老宋体(KingHwa_OldSong),网站全局字体将设置为京华老宋体，其次是 Noto Serif CJK SC，如果这两个字体都未安装，则会使用您的系统默认字体。
+网站使用京華老宋体（KingHwa_OldSong）作为默认字体，感谢[字图CDN(中文网字计划)](https://chinese-font.netlify.app/cdn)提供的字体加速 CDN。
+
+网站使用 Github Pages 静态托管。
 
 您随时都可以提出改进建议。
 
@@ -27,6 +29,8 @@ events:
   - timestamp: 2024-08-15
     content: 网站正式建立，使用 FixIt 主题
   - timestamp: 2024-08-16
+    content: 网站在技术上测试，网站 Github 仓库重新创建
+  - timestamp: 2024-08-17
     content: 网站在技术上测试，网站 Github 仓库重新创建
 ```
 
