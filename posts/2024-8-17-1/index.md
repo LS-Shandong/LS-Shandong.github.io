@@ -25,5 +25,5 @@ TeX Live 包括许多 Tex 引擎，如 pdfTex、XeTex、LuaTex。
 ---
 
 > 作者: LS-Shandong  
-> URL: ls-shandong.github.io/posts/2024-8-17-1/  
+> URL: //localhost:1313/posts/2024-8-17-1/  
 

@@ -23,5 +23,5 @@
 ---
 
 > 作者:   
-> URL: ls-shandong.github.io/friends/  
+> URL: //localhost:1313/friends/  
 
