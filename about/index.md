@@ -38,5 +38,5 @@ events:
 ---
 
 > 作者:   
-> URL: //localhost:1313/about/  
+> URL: ls-shandong.github.io/about/  
 
