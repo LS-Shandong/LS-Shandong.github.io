@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>所有文章 - LS-Shandong 的博客</title>
-    <link>//localhost:1313/posts/</link>
+    <link>ls-shandong.github.io/posts/</link>
     <description>所有文章 | LS-Shandong 的博客</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 17 Aug 2024 18:11:06 &#43;0800</lastBuildDate><atom:link href="//localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 17 Aug 2024 18:11:06 &#43;0800</lastBuildDate><atom:link href="ls-shandong.github.io/posts/" rel="self" type="application/rss+xml" /><item>
   <title>《乾坤带》选段-满园春色艳阳天</title>
-  <link>//localhost:1313/posts/2024-8-17-2/</link>
+  <link>ls-shandong.github.io/posts/2024-8-17-2/</link>
   <pubDate>Sat, 17 Aug 2024 18:11:06 &#43;0800</pubDate>
   <author>LS-Shandong</author>
-  <guid>//localhost:1313/posts/2024-8-17-2/</guid>
+  <guid>ls-shandong.github.io/posts/2024-8-17-2/</guid>
   <description><![CDATA[<p>评剧《乾坤带》选段欣赏。</p>
 <div class="bilibili">
   <iframe src="//player.bilibili.com/player.html?bvid=BV1EP4y1W7PJ&page=1&autoplay=false&poster=true&muted=false&danmaku=true&t=0" border="0" framespacing="0" allowfullscreen="true"></iframe>
@@ -17,10 +17,10 @@
 </item>
 <item>
   <title>Arch Linux 上 LaTex 环境的安装与配置</title>
-  <link>//localhost:1313/posts/2024-8-17-1/</link>
+  <link>ls-shandong.github.io/posts/2024-8-17-1/</link>
   <pubDate>Sat, 17 Aug 2024 12:21:02 &#43;0800</pubDate>
   <author>LS-Shandong</author>
-  <guid>//localhost:1313/posts/2024-8-17-1/</guid>
+  <guid>ls-shandong.github.io/posts/2024-8-17-1/</guid>
   <description><![CDATA[<p>我们要使用 Latex,一般是要安装 Tex Live 和一个 Latex 编辑器，这在 Linux 上很容易实现。</p>
 <h2 id="安装" class="heading-element"><span>安装</span>
   <a href="#%e5%ae%89%e8%a3%85" class="heading-mark">
@@ -46,10 +46,10 @@
 </item>
 <item>
   <title>在 Linux 上使用无线网卡（网卡基于RTL8188GU芯片）</title>
-  <link>//localhost:1313/posts/2024-8-15-1/</link>
+  <link>ls-shandong.github.io/posts/2024-8-15-1/</link>
   <pubDate>Thu, 15 Aug 2024 13:29:43 &#43;0800</pubDate>
   <author>LS-Shandong</author>
-  <guid>//localhost:1313/posts/2024-8-15-1/</guid>
+  <guid>ls-shandong.github.io/posts/2024-8-15-1/</guid>
   <description><![CDATA[<p>我的网卡为<strong>迅捷150UH</strong>，我准备在我的 Arch Linux 上使用之。</p>
 <p>可运行 <code>lsusb</code> 命令以查询此网卡之芯片型号。lsusb 命令由软件包 <code>usbutils</code> 提供。</p>
 <pre><code>$ lsusb

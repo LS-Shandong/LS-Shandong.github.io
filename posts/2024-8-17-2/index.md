@@ -10,5 +10,5 @@
 ---
 
 > 作者: LS-Shandong  
-> URL: //localhost:1313/posts/2024-8-17-2/  
+> URL: ls-shandong.github.io/posts/2024-8-17-2/  
 
