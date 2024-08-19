@@ -1,6 +1,6 @@
 # 如何将 MIDI 音乐文件转换为 MP3 文件并压缩？
 
-MIDI 曾经非常流行，。在专业音乐创作/编曲中，它仍然起着至关重要的作用。本文主要介绍将 MIDI（.mid）文件转换为 MP3 文件的方法。
+MIDI 曾经非常流行。在专业音乐创作/编曲中，它仍然起着至关重要的作用。本文主要介绍将 MIDI（.mid）文件转换为 MP3 文件的方法。
 &lt;!--more--&gt;
 
 本文全部操作均在 Arch Linux 环境下。
@@ -9,11 +9,11 @@ MIDI 曾经非常流行，。在专业音乐创作/编曲中，它仍然起着�
 
 要转换 MIDI（.mid）文件，我们需要：
 
-- 一个**常见的**合成器（比如 FluidSynth 或 TiMidty&#43;&#43;）
+- 一个**常见的**合成器（比如 FluidSynth 或 TiMidity&#43;&#43;）
 
 - soundfont（比如 Fluid 或 FreePats）
 
-- 软件包 ffmpeg（TiMidty&#43;&#43; 需要） 或 twolame（FluidSynth 需要）
+- 软件包 ffmpeg（TiMidity&#43;&#43; 需要） 或 twolame（FluidSynth 需要）
 
 要压缩 MIDI（.mid）文件，我们需要：
 
@@ -39,7 +39,7 @@ MIDI 曾经非常流行，。在专业音乐创作/编曲中，它仍然起着�
 {{&lt; /admonition &gt;}}
 
 
-### 对于 TiMidty
+### 对于 TiMidity
 
 要将 MIDI（.mid）文件转换为 MP3 文件，运行：
 
@@ -66,6 +66,12 @@ MIDI 曾经非常流行，。在专业音乐创作/编曲中，它仍然起着�
 {{&lt; /admonition &gt;}}
 
 还有其它方法，慢慢补充。
+
+## 参见
+
+1.[MIDI -ArchWiki](https://wiki.archlinux.org/title/MIDI)
+2.[FluidSynth -Arch Linux 中文维基](https://wiki.archlinuxcn.org/wiki/FluidSynth)
+3.[Timidity&#43;&#43; -Arch Linux 中文维基](https://wiki.archlinuxcn.org/wiki/Timidity%2B%2B)
 
 
 ---
