@@ -70,7 +70,9 @@ MIDI 曾经非常流行。在专业音乐创作/编曲中，它仍然起着至�
 ## 参见
 
 1.[MIDI -ArchWiki](https://wiki.archlinux.org/title/MIDI)
+
 2.[FluidSynth -Arch Linux 中文维基](https://wiki.archlinuxcn.org/wiki/FluidSynth)
+
 3.[Timidity&#43;&#43; -Arch Linux 中文维基](https://wiki.archlinuxcn.org/wiki/Timidity%2B%2B)
 
 
