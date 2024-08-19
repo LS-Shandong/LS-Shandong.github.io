@@ -11,7 +11,7 @@
   <pubDate>Mon, 19 Aug 2024 14:48:00 &#43;0800</pubDate>
   <author>LS-Shandong</author>
   <guid>https://ls-shandong.github.io/posts/2024-8-19-1/</guid>
-  <description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/blogs/2024-8-19-1/2024-8-19.png" alt="如何将 MIDI 音乐文件转换为 MP3 文件并压缩？" title="如何将 MIDI 音乐文件转换为 MP3 文件并压缩？" referrerpolicy="no-referrer"/></div><p>MIDI 曾经非常流行。在专业音乐创作/编曲中，它仍然起着至关重要的作用。本文主要介绍将 MIDI（.mid）文件转换为 MP3 文件的方法。</p>
+  <description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/blogs/2024-8-19-1/2024-8-19-1.png" alt="如何将 MIDI 音乐文件转换为 MP3 文件并压缩？" title="如何将 MIDI 音乐文件转换为 MP3 文件并压缩？" referrerpolicy="no-referrer"/></div><p>MIDI 曾经非常流行。在专业音乐创作/编曲中，它仍然起着至关重要的作用。本文主要介绍将 MIDI（.mid）文件转换为 MP3 文件的方法。</p>
 <p>本文全部操作均在 Arch Linux 环境下。</p>
 <h2 id="需要的软件包" class="heading-element"><span>需要的软件包</span>
   <a href="#%e9%9c%80%e8%a6%81%e7%9a%84%e8%bd%af%e4%bb%b6%e5%8c%85" class="heading-mark">
@@ -139,7 +139,7 @@
   <pubDate>Sat, 17 Aug 2024 12:21:02 &#43;0800</pubDate>
   <author>LS-Shandong</author>
   <guid>https://ls-shandong.github.io/posts/2024-8-17-1/</guid>
-  <description><![CDATA[<p>我们要使用 Latex,一般是要安装 Tex Live 和一个 Latex 编辑器，这在 Linux 上很容易实现。</p>
+  <description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/blogs/2024-8-17-1/2024-8-17-1.png" alt="Arch Linux 上 LaTex 环境的安装与配置" title="Arch Linux 上 LaTex 环境的安装与配置" referrerpolicy="no-referrer"/></div><p>我们要使用 Latex,一般是要安装 Tex Live 和一个 Latex 编辑器，这在 Linux 上很容易实现。</p>
 <h2 id="安装" class="heading-element"><span>安装</span>
   <a href="#%e5%ae%89%e8%a3%85" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
@@ -168,7 +168,7 @@
   <pubDate>Thu, 15 Aug 2024 13:29:43 &#43;0800</pubDate>
   <author>LS-Shandong</author>
   <guid>https://ls-shandong.github.io/posts/2024-8-15-1/</guid>
-  <description><![CDATA[<p>我的网卡为<strong>迅捷150UH</strong>，我准备在我的 Arch Linux 上使用之。</p>
+  <description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/blogs/2024-8-15-1/2024-8-15-1.png" alt="在 Linux 上使用无线网卡（网卡基于RTL8188GU芯片）" title="我的无线网卡基于 RTL8188GU，需要安装 `usb_modeswitch` 以将其切换至 Wifi 模式（这个网络上资料不多） 。" referrerpolicy="no-referrer"/></div><p>我的网卡为<strong>迅捷150UH</strong>，我准备在我的 Arch Linux 上使用之。</p>
 <p>可运行 <code>lsusb</code> 命令以查询此网卡之芯片型号。lsusb 命令由软件包 <code>usbutils</code> 提供。</p>
 <pre><code>$ lsusb
 </code></pre>

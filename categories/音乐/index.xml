@@ -9,7 +9,7 @@
   <pubDate>Mon, 19 Aug 2024 14:48:00 &#43;0800</pubDate>
   <author>LS-Shandong</author>
   <guid>https://ls-shandong.github.io/posts/2024-8-19-1/</guid>
-  <description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/blogs/2024-8-19-1/2024-8-19.png" alt="如何将 MIDI 音乐文件转换为 MP3 文件并压缩？" title="如何将 MIDI 音乐文件转换为 MP3 文件并压缩？" referrerpolicy="no-referrer"/></div><p>MIDI 曾经非常流行。在专业音乐创作/编曲中，它仍然起着至关重要的作用。本文主要介绍将 MIDI（.mid）文件转换为 MP3 文件的方法。</p>
+  <description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/blogs/2024-8-19-1/2024-8-19-1.png" alt="如何将 MIDI 音乐文件转换为 MP3 文件并压缩？" title="如何将 MIDI 音乐文件转换为 MP3 文件并压缩？" referrerpolicy="no-referrer"/></div><p>MIDI 曾经非常流行。在专业音乐创作/编曲中，它仍然起着至关重要的作用。本文主要介绍将 MIDI（.mid）文件转换为 MP3 文件的方法。</p>
 <p>本文全部操作均在 Arch Linux 环境下。</p>
 <h2 id="需要的软件包" class="heading-element"><span>需要的软件包</span>
   <a href="#%e9%9c%80%e8%a6%81%e7%9a%84%e8%bd%af%e4%bb%b6%e5%8c%85" class="heading-mark">
