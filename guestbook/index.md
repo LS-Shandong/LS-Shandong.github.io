@@ -6,5 +6,5 @@
 ---
 
 > 作者:   
-> URL: //localhost:1313/guestbook/  
+> URL: https://ls-shandong.github.io/guestbook/  
 

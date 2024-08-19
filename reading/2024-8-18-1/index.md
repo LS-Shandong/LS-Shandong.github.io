@@ -29,5 +29,5 @@
 ---
 
 > 作者: LS-Shandong  
-> URL: //localhost:1313/reading/2024-8-18-1/  
+> URL: https://ls-shandong.github.io/reading/2024-8-18-1/  
 

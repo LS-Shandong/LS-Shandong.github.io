@@ -1,5 +1,9 @@
 # 友情链接
 
+
+&gt; 谅解、支援和友谊，比什么都重要。
+&gt;                   ——毛泽东
+
 ## 提交链接
 
 使用以下模板在下方评论：
@@ -32,5 +36,5 @@
 ---
 
 > 作者:   
-> URL: //localhost:1313/friends/  
+> URL: https://ls-shandong.github.io/friends/  
 

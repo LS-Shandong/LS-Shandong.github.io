@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>硬件 - 分类 - LS-Shandong 的博客</title>
-    <link>//localhost:1313/categories/%E7%A1%AC%E4%BB%B6/</link>
+    <link>https://ls-shandong.github.io/categories/%E7%A1%AC%E4%BB%B6/</link>
     <description>硬件 - 分类 | LS-Shandong 的博客</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 15 Aug 2024 13:29:43 &#43;0800</lastBuildDate><atom:link href="//localhost:1313/categories/%E7%A1%AC%E4%BB%B6/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 15 Aug 2024 13:29:43 &#43;0800</lastBuildDate><atom:link href="https://ls-shandong.github.io/categories/%E7%A1%AC%E4%BB%B6/" rel="self" type="application/rss+xml" /><item>
   <title>在 Linux 上使用无线网卡（网卡基于RTL8188GU芯片）</title>
-  <link>//localhost:1313/posts/2024-8-15-1/</link>
+  <link>https://ls-shandong.github.io/posts/2024-8-15-1/</link>
   <pubDate>Thu, 15 Aug 2024 13:29:43 &#43;0800</pubDate>
   <author>LS-Shandong</author>
-  <guid>//localhost:1313/posts/2024-8-15-1/</guid>
+  <guid>https://ls-shandong.github.io/posts/2024-8-15-1/</guid>
   <description><![CDATA[<p>我的网卡为<strong>迅捷150UH</strong>，我准备在我的 Arch Linux 上使用之。</p>
 <p>可运行 <code>lsusb</code> 命令以查询此网卡之芯片型号。lsusb 命令由软件包 <code>usbutils</code> 提供。</p>
 <pre><code>$ lsusb
