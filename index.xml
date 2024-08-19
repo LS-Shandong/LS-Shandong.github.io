@@ -3,9 +3,95 @@
     <title>LS-Shandong 的博客</title>
     <link>https://ls-shandong.github.io/</link>
     <description>LS-Shandong 的博客</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 19 Aug 2024 13:38:09 &#43;0800</lastBuildDate>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 19 Aug 2024 14:48:00 &#43;0800</lastBuildDate>
       <atom:link href="https://ls-shandong.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+  <title>如何将 MIDI 音乐文件转换为 MP3 文件并压缩？</title>
+  <link>https://ls-shandong.github.io/posts/2024-8-19-1/</link>
+  <pubDate>Mon, 19 Aug 2024 14:48:00 &#43;0800</pubDate>
+  <author>LS-Shandong</author>
+  <guid>https://ls-shandong.github.io/posts/2024-8-19-1/</guid>
+  <description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/blogs/2024-8-19-1/2024-8-19.png" alt="如何将 MIDI 音乐文件转换为 MP3 文件并压缩？" title="如何将 MIDI 音乐文件转换为 MP3 文件并压缩？" referrerpolicy="no-referrer"/></div><p>MIDI 曾经非常流行，。在专业音乐创作/编曲中，它仍然起着至关重要的作用。本文主要介绍将 MIDI（.mid）文件转换为 MP3 文件的方法。</p>
+<p>本文全部操作均在 Arch Linux 环境下。</p>
+<h2 id="需要的软件包" class="heading-element"><span>需要的软件包</span>
+  <a href="#%e9%9c%80%e8%a6%81%e7%9a%84%e8%bd%af%e4%bb%b6%e5%8c%85" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>要转换 MIDI（.mid）文件，我们需要：</p>
+<ul>
+<li>
+<p>一个<strong>常见的</strong>合成器（比如 FluidSynth 或 TiMidty++）</p>
+</li>
+<li>
+<p>soundfont（比如 Fluid 或 FreePats）</p>
+</li>
+<li>
+<p>软件包 ffmpeg（TiMidty++ 需要） 或 twolame（FluidSynth 需要）</p>
+</li>
+</ul>
+<p>要压缩 MIDI（.mid）文件，我们需要：</p>
+<ul>
+<li>ffmpeg</li>
+</ul>
+<p>上述软件包均存在于官方仓库中。要安装它们，直接运行：</p>
+<p><code>pacman -S 软件包名称</code></p>
+<h2 id="转换" class="heading-element"><span>转换</span>
+  <a href="#%e8%bd%ac%e6%8d%a2" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="对于-fluidsynth" class="heading-element"><span>对于 FluidSynth</span>
+  <a href="#%e5%af%b9%e4%ba%8e-fluidsynth" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>要将 MIDI（.mid）文件转换为 MP3 文件，运行：</p>
+<p><code>$ fluidsynth -l -T raw -F - /usr/share/soundfonts/FluidR3_GM.sf2 input.mid | twolame -b 256 -r - output.mp3</code>
+<div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-lightbulb fa-fw" aria-hidden="true"></i>提示<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content"><p>将 <em>FluidR3_GM.sf2</em> 替换为您选择的 <em>soundfont</em>，</p>
+<p>将 <em>input.mid</em> 替换为要转换的 MIDI 文件，</p>
+<p>将 <em>output.mp3</em> 替换为目标 mp3 文件。</p>
+</div>
+    </div>
+  </div></p>
+<h3 id="对于-timidty" class="heading-element"><span>对于 TiMidty</span>
+  <a href="#%e5%af%b9%e4%ba%8e-timidty" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>要将 MIDI（.mid）文件转换为 MP3 文件，运行：</p>
+<p><code>$ timidity input.mid -Ow -o - | ffmpeg -i - -acodec libmp3lame -ab 256k out.mp3</code></p>
+<div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-lightbulb fa-fw" aria-hidden="true"></i>提示<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content"><p>将 <em>input.mid</em> 替换为要转换的 MIDI 文件，</p>
+<p>将 <em>output.mp3</em> 替换为目标 mp3 文件。</p>
+</div>
+    </div>
+  </div>
+<h2 id="压缩" class="heading-element"><span>压缩</span>
+  <a href="#%e5%8e%8b%e7%bc%a9" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>我们在前面转换的时候设置 mp3 文件码率为256kbps，可以通过降低码率来压缩 mp3，运行：</p>
+<p><code>$ ffmpeg -i input.mp3 -b:a 128k output.mp3</code></p>
+<div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-lightbulb fa-fw" aria-hidden="true"></i>提示<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content"><p>将 <em>input.mp3</em> 替换为要压缩的 mp3 文件，</p>
+<p>将 <em>output.mp3</em> 替换为目标 mp3 文件。</p>
+<p>将 <em>128k</em> 替换为目标码率</p>
+</div>
+    </div>
+  </div>
+<p>还有其它方法，慢慢补充。</p>]]></description>
+</item>
+<item>
   <title>读《报任安书》</title>
   <link>https://ls-shandong.github.io/reading/2024-8-18-1/</link>
   <pubDate>Sun, 18 Aug 2024 12:52:34 &#43;0800</pubDate>
