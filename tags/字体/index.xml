@@ -1,9 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>软件 - 分类 - LS-Shandong 的博客</title>
-    <link>https://ls-shandong.github.io/categories/%E8%BD%AF%E4%BB%B6/</link>
-    <description>软件 - 分类 | LS-Shandong 的博客</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 20 Aug 2024 14:36:32 &#43;0800</lastBuildDate><atom:link href="https://ls-shandong.github.io/categories/%E8%BD%AF%E4%BB%B6/" rel="self" type="application/rss+xml" /><item>
+    <title>字体 - 标签 - LS-Shandong 的博客</title>
+    <link>https://ls-shandong.github.io/tags/%E5%AD%97%E4%BD%93/</link>
+    <description>字体 - 标签 | LS-Shandong 的博客</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 20 Aug 2024 14:36:32 &#43;0800</lastBuildDate><atom:link href="https://ls-shandong.github.io/tags/%E5%AD%97%E4%BD%93/" rel="self" type="application/rss+xml" /><item>
   <title>对 TTF 字体进行压缩与转换</title>
   <link>https://ls-shandong.github.io/posts/2024-8-20-1/</link>
   <pubDate>Tue, 20 Aug 2024 14:36:32 &#43;0800</pubDate>
@@ -96,35 +96,6 @@
 <p><figure><a class="lightgallery" href="/images/blogs/2024-8-20-1/2024-8-20-1-3.png?size=large" data-thumbnail="/images/blogs/2024-8-20-1/2024-8-20-1-3.png?size=small" data-sub-html="<h2>运行结果示例</h2><p>运行结果示例</p>"><img loading="lazy" src="/images/blogs/2024-8-20-1/2024-8-20-1-3.png" alt="运行结果示例" srcset="/images/blogs/2024-8-20-1/2024-8-20-1-3.png?size=small, /images/blogs/2024-8-20-1/2024-8-20-1-3.png?size=medium 1.5x, /images/blogs/2024-8-20-1/2024-8-20-1-3.png?size=large 2x" data-title="运行结果示例" style="--width: 577px;--aspect-ratio: 577 / 66;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a><figcaption class="image-caption">运行结果示例</figcaption>
   </figure></p>
 <p>当前目录就会出现一个转换后的 woff2 文件。</p>]]></description>
-</item>
-<item>
-  <title>Arch Linux 上 LaTex 环境的安装与配置</title>
-  <link>https://ls-shandong.github.io/posts/2024-8-17-1/</link>
-  <pubDate>Sat, 17 Aug 2024 12:21:02 &#43;0800</pubDate>
-  <author>LS-Shandong</author>
-  <guid>https://ls-shandong.github.io/posts/2024-8-17-1/</guid>
-  <description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/blogs/2024-8-17-1/2024-8-17-1.png" alt="Arch Linux 上 LaTex 环境的安装与配置" title="Arch Linux 上 LaTex 环境的安装与配置" referrerpolicy="no-referrer"/></div><p>我们要使用 Latex,一般是要安装 Tex Live 和一个 Latex 编辑器，这在 Linux 上很容易实现。</p>
-<h2 id="安装" class="heading-element"><span>安装</span>
-  <a href="#%e5%ae%89%e8%a3%85" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><h2 id="安装-tex-live" class="heading-element"><span>安装 Tex Live</span>
-  <a href="#%e5%ae%89%e8%a3%85-tex-live" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><p>TeX Live 包括许多 Tex 引擎，如 pdfTex、XeTex、LuaTex。</p>
-<p>官方仓库里存在一个名为 <strong>texlive</strong> 的软件包组，其中包含了包含大多数 TeX Live 包，根据上游集合进行分类，还要安装 <strong>texlive-lang</strong> 以获得中文等语言的支持。</p>
-<p>此外，还可以安装 <strong>texlive-doc</strong> 以获得整个 TeX Live 文档和源文件。</p>
-<h2 id="安装编辑器" class="heading-element"><span>安装编辑器</span>
-  <a href="#%e5%ae%89%e8%a3%85%e7%bc%96%e8%be%91%e5%99%a8" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><p>我个人比较倾向于使用 <strong>TeXstudio</strong> 和 <strong>kile</strong>。直接从官方源安装即可。</p>
-<h3 id="texstudio-的配置" class="heading-element"><span>TeXstudio 的配置</span>
-  <a href="#texstudio-%e7%9a%84%e9%85%8d%e7%bd%ae" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h3><p>要启用 XeTex 以获得 Unicode 和现代字体技术支持,转至 <em><strong>选项 &gt; 设置TeXstudio &gt; 构建 &gt; 默认编译器</strong></em>。选择 <em>XeTex</em> 即可。</p>]]></description>
 </item>
 </channel>
 </rss>

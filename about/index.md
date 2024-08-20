@@ -20,8 +20,6 @@
 
 网站使用京華老宋体（KingHwa_OldSong）作为默认字体，感谢[字图CDN(中文网字计划)](https://chinese-font.netlify.app/cdn)提供的字体加速 CDN。
 
-网站背景动态图参考了[这篇文章](https://herenpeng.github.io/2023/03/14/javascript/推荐几种简洁美观的博客背景效果/)。
-
 网站使用 Github Pages 静态托管。
 
 您随时都可以提出改进建议。
