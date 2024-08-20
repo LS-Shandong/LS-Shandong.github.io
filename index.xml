@@ -94,10 +94,10 @@
 <p>在 Arch Linux 上，将 ttf 文件转换为 woff2 文件，需要安装软件包 <em>woff2</em>：</p>
 <p><code># pacman -S woff2</code></p>
 <p>然后在字体所在目录，执行：</p>
-<p><code>$ woff2_compress 要转换的字体的名称</code></p>
+<p><code>$ woff2_compress 要转换的字体文件的名称</code></p>
 <p><figure><a class="lightgallery" href="/images/blogs/2024-8-20-1/2024-8-20-1-3.png?size=large" data-thumbnail="/images/blogs/2024-8-20-1/2024-8-20-1-3.png?size=small" data-sub-html="<h2>运行结果示例</h2><p>运行结果示例</p>"><img loading="lazy" src="/images/blogs/2024-8-20-1/2024-8-20-1-3.png" alt="运行结果示例" srcset="/images/blogs/2024-8-20-1/2024-8-20-1-3.png?size=small, /images/blogs/2024-8-20-1/2024-8-20-1-3.png?size=medium 1.5x, /images/blogs/2024-8-20-1/2024-8-20-1-3.png?size=large 2x" data-title="运行结果示例" style="--width: 577px;--aspect-ratio: 577 / 66;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></a><figcaption class="image-caption">运行结果示例</figcaption>
   </figure></p>
-<p>当前目录就会出现一个转换后的 woff2 文件。</p>]]></description>
+<p>当前目录就会出现一个转换后的 woff2 文件,1.9 MB。</p>]]></description>
 </item>
 <item>
   <title>如何将 MIDI 音乐文件转换为 MP3 文件并压缩？</title>
