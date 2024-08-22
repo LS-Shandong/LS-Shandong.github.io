@@ -3,7 +3,19 @@
     <title>所有文章 - LS-Shandong 的博客</title>
     <link>https://ls-shandong.github.io/posts/</link>
     <description>所有文章 | LS-Shandong 的博客</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 22 Aug 2024 14:23:19 &#43;0800</lastBuildDate><atom:link href="https://ls-shandong.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 22 Aug 2024 15:32:34 &#43;0800</lastBuildDate><atom:link href="https://ls-shandong.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+  <title>给 tree 命令加上彩色输出</title>
+  <link>https://ls-shandong.github.io/posts/2024-8-22-2/</link>
+  <pubDate>Thu, 22 Aug 2024 15:32:34 &#43;0800</pubDate>
+  <author>LS-Shandong</author>
+  <guid>https://ls-shandong.github.io/posts/2024-8-22-2/</guid>
+  <description><![CDATA[<p>给 tree 命令加上彩色输出。</p>
+<p>默认安装的 Arch Linux 的 <em>ls</em> 命令是默认彩色输出的，而 <em>tree</em> 软件包提供的 tree  命令默认没有彩色输出。因为 Arch Linux 默认把 <em>ls</em> 设置为了 <em>ls &ndash;color=auto</em> 的别名那么我们也采用这种方式。</p>
+<p>打开 <strong>~/.bashrc</strong> ，插入以下一行：</p>
+<p><code>alias tree='tree -C'</code></p>
+<p>然后注销再重新登录，此时再执行 tree 命令，就是彩色输出了。</p>]]></description>
+</item>
+<item>
   <title>中文自由或开源游戏维基</title>
   <link>https://ls-shandong.github.io/posts/2024-8-22-1/</link>
   <pubDate>Thu, 22 Aug 2024 14:23:19 &#43;0800</pubDate>
