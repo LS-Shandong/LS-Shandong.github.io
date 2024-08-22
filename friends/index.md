@@ -1,8 +1,10 @@
 # 友情链接
 
-
 &gt; 谅解、支援和友谊，比什么都重要。
 &gt;                   ——毛泽东
+## 提示
+
+截至 2024-8-22,Zlin&#39; Blog、VVulpes、Sulv&#39;s Blog、Tofuwine&#39;s Blog、小李同学Coding 未通过我的友链请求。
 
 ## 免责声明
 
@@ -60,6 +62,7 @@
   url: https://ls-shandong.github.io
   description: LS-Shandong 的博客网站
   screenshot: https://ls-shandong.github.io/images/screenshot.png
+  RSS: https://ls-shandong.github.io/index.xml
 ````
 
 

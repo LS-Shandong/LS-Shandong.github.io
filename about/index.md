@@ -8,6 +8,8 @@
 
 我热爱阅读和收藏古籍与旧书等。
 
+我帮助翻译了 [Calculator-You](https://github.com/forzzzzz/Calculator-You) 等软件或软件手册。目前正在准备 [Libregamewiki](https://libregamewiki.org/Main_Page) 的翻译工作，详见[此处](https://ls-shandong.github.io/posts/2024-8-22-1)。
+
 ## 关于 ls-shandong.github.io
 
 ## 主页名言来源

@@ -3,9 +3,27 @@
     <title>LS-Shandong 的博客</title>
     <link>https://ls-shandong.github.io/</link>
     <description>LS-Shandong 的博客</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 20 Aug 2024 14:36:32 &#43;0800</lastBuildDate>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 22 Aug 2024 14:23:19 &#43;0800</lastBuildDate>
       <atom:link href="https://ls-shandong.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+  <title>中文自由或开源游戏维基</title>
+  <link>https://ls-shandong.github.io/posts/2024-8-22-1/</link>
+  <pubDate>Thu, 22 Aug 2024 14:23:19 &#43;0800</pubDate>
+  <author>LS-Shandong</author>
+  <guid>https://ls-shandong.github.io/posts/2024-8-22-1/</guid>
+  <description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/blogs/2024-8-22-1/2024-8-22-1.png" alt="中文自由或开源游戏维基" title="中文自由或开源游戏维基" referrerpolicy="no-referrer"/></div><p>Libregamewiki 的中文翻译工作开始了。</p>
+<p>我从今年早些时候就提出要翻译 <a href="https://libregamewiki.org/Libregamewiki:Community_portal#Can_I_create_translation_pages_for_existing_articles_on_this_wiki?"target="_blank" rel="external nofollow noopener noreferrer">Libregamewiki</a>了（虽然这和 Arch Linux 中文维基<em>游戏列表</em>界面有点重复）,可是 Libregamewiki 的社区一直不回复,那我就自己做好了。可是我又没有一个适合托管 wiki 的服务器。就想到了<a href="https://readthedocs.com/"target="_blank" rel="external nofollow noopener noreferrer">Read the Docs</a>（虽然它不是专门用来写 wiki 的），现在已经<a href="https://chinese-libre-game-wiki.readthedocs.io"target="_blank" rel="external nofollow noopener noreferrer">部署上去了</a>。</p>
+<p>但是它现在仍然处于“毛坯”的状态，有兴趣做翻译工作的可以去 <a href="https://github.com/LS-Shandong/Chinese-libre-game-wiki"target="_blank" rel="external nofollow noopener noreferrer">Github</a> 提 Issues 或在本页下方评论。而且，我不会把工作重心转移至这上面来。</p>
+<div class="details admonition tip open">
+    <div class="details-summary admonition-title">
+      <i class="icon fa-solid fa-lightbulb fa-fw" aria-hidden="true"></i>提示<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
+    </div>
+    <div class="details-content">
+      <div class="admonition-content">如果坚持不下去，我就会放弃这个项目。</div>
+    </div>
+  </div>]]></description>
+</item>
+<item>
   <title>对 TTF 字体进行压缩与转换</title>
   <link>https://ls-shandong.github.io/posts/2024-8-20-1/</link>
   <pubDate>Tue, 20 Aug 2024 14:36:32 &#43;0800</pubDate>
