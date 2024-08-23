@@ -12,7 +12,7 @@
   <author>LS-Shandong</author>
   <guid>https://ls-shandong.github.io/posts/2024-8-22-2/</guid>
   <description><![CDATA[<p>给 tree 命令加上彩色输出。</p>
-<p>默认安装的 Arch Linux 的 <em>ls</em> 命令是默认彩色输出的，而 <em>tree</em> 软件包提供的 tree  命令默认没有彩色输出。因为 Arch Linux 默认把 <em>ls</em> 设置为了 <em>ls &ndash;color=auto</em> 的别名，那么我们也采用这种方式。</p>
+<p>默认安装的 Arch Linux 的 <em>ls</em> 命令是默认彩色输出的，而 <em>tree</em> 软件包提供的 tree  命令默认没有彩色输出。<em>ls</em> 有彩色输出是因为 Arch Linux 默认把 <em>ls</em> 设置为了 <strong>ls &ndash;color=auto</strong> 的别名，那么我们也采用这种方式。</p>
 <p>打开 <strong>~/.bashrc</strong> ，插入以下一行：</p>
 <p><code>alias tree='tree -C'</code></p>
 <p>然后注销再重新登录，此时再执行 tree 命令，就是彩色输出了。</p>]]></description>
