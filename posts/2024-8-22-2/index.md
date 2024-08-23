@@ -2,7 +2,7 @@
 
 给 tree 命令加上彩色输出。
 &lt;!--more--&gt;
-默认安装的 Arch Linux 的 *ls* 命令是默认彩色输出的，而 *tree* 软件包提供的 tree  命令默认没有彩色输出。*ls* 有彩色输出是因为 Arch Linux 默认把 *ls* 设置为了 **ls --color=auto** 的别名，那么我们也采用这种方式。
+默认安装的 Arch Linux 的 *ls* 命令是默认彩色输出的，而 *tree* 软件包提供的 tree  命令默认没有彩色输出。*ls* 有彩色输出是因为 Arch Linux 默认把 *ls* 设置为了 `ls --color=auto` 的别名，那么我们也采用这种方式。
 
 打开 **~/.bashrc** ，插入以下一行：
 
