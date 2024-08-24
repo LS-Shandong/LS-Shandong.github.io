@@ -3,7 +3,49 @@
     <title>硬件 - 分类 - LS-Shandong 的博客</title>
     <link>https://ls-shandong.github.io/categories/%E7%A1%AC%E4%BB%B6/</link>
     <description>硬件 - 分类 | LS-Shandong 的博客</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 15 Aug 2024 13:29:43 &#43;0800</lastBuildDate><atom:link href="https://ls-shandong.github.io/categories/%E7%A1%AC%E4%BB%B6/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 24 Aug 2024 13:55:31 &#43;0800</lastBuildDate><atom:link href="https://ls-shandong.github.io/categories/%E7%A1%AC%E4%BB%B6/" rel="self" type="application/rss+xml" /><item>
+  <title>Linux 启动时报错</title>
+  <link>https://ls-shandong.github.io/posts/2024-8-24-1/</link>
+  <pubDate>Sat, 24 Aug 2024 13:55:31 &#43;0800</pubDate>
+  <author>LS-Shandong</author>
+  <guid>https://ls-shandong.github.io/posts/2024-8-24-1/</guid>
+  <description><![CDATA[<p>每次开机都报错，最后排查出是网卡的问题。</p>
+<p>每次开机时都会报一堆错误，却不影响系统使用，这种情况从那次重装 Arch Linux 后就有了。</p>
+<p>运行： <code># journalctl -p err..alert</code> 得到结果是这样的（有删减）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">I/O error, dev sr1, sector 262128 op 0x0:(READ) flags 0x80700 phys_seg 1 prio class&gt;
+</span></span><span class="line"><span class="cl">I/O error, dev sr1, sector 262128 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 0
+</span></span><span class="line"><span class="cl">Buffer I/O error on dev sr1, logical block 32766, async page read
+</span></span><span class="line"><span class="cl">I/O error, dev sr1, sector 4096 op 0x0:(READ) flags 0x80700 phys_seg 1 prio class 0
+</span></span><span class="line"><span class="cl">I/O error, dev sr1, sector 4096 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 0
+</span></span><span class="line"><span class="cl">Buffer I/O error on dev sr1, logical block 512, async page read
+</span></span><span class="line"><span class="cl">I/O error, dev sr1, sector 260080 op 0x0:(READ) flags 0x80700 phys_seg 1 prio class&gt;
+</span></span><span class="line"><span class="cl">I/O error, dev sr1, sector 260080 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 0
+</span></span><span class="line"><span class="cl">Buffer I/O error on dev sr1, logical block 32510, async page read
+</span></span><span class="line"><span class="cl">Buffer I/O error on dev sr1, logical block 512, async page read</span></span></code></pre></td></tr></table>
+</div>
+</div><p>看报错好像是光盘驱动器坏了。我确实有一个光盘驱动器，但是它是正常的，而且，关键的是，我的光盘驱动器是 <em>/dev/sr0</em> 而不是 <em>/dev/sr1</em>。</p>
+<p>运行 <code>ls /dev/</code> 发现 <em>/dev/</em> 目录下只有 <em>/dev/sr0</em>。</p>
+<p>运行 <code>udevadm info /dev/sr1</code> ，得到 <code>Unknown device &quot;/dev/sr1&quot;: No such device</code>。</p>
+<p>在 Arch Linux CN 的聊天群问了问，明白这是怎么回事了。</p>
+<p>有些无线网卡厂家，为了实现“免驱”效果，会把网卡模拟成一个光驱，然后把驱动程序放入模拟光驱中，再放个 autorun 文件，网卡就会在首次插入 <em>Windows</em> 电脑时自动安装驱动程序。</p>
+<p>然而它不会自动安装 Linux 驱动程序。在 Linux 上，驱动程序可作为内核模块（Module）使用。虽然 Linux 内核里包含了我的网卡的驱动程序，但是由于网卡还是会被识别为一个光驱，我们需要用软件 usb_modeswitch 来把它切换成 Wifi 模式。这便是我以前写的一篇文章<a href="https://ls-shandong.github.io/posts/2024-8-15-1/"target="_blank" rel="external nofollow noopener noreferrer">《在 Linux 上使用无线网卡（网卡基于 RTL8188GU 芯片）》</a>的主要内容。</p>
+<p>显然,这个 <em>/dev/sr1</em> 就是我的网卡，奇怪的是 /dev/sr0 和 /dev/sr1 都会启动时报 I/O 错误。您若是有什么见解可以在评论说出来。</p>]]></description>
+</item>
+<item>
   <title>在 Linux 上使用无线网卡（网卡基于RTL8188GU芯片）</title>
   <link>https://ls-shandong.github.io/posts/2024-8-15-1/</link>
   <pubDate>Thu, 15 Aug 2024 13:29:43 &#43;0800</pubDate>
