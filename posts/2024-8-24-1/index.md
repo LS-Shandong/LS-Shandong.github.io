@@ -1,8 +1,7 @@
 # Linux 启动时报错
 
-每次开机都报错，最后排查出是网卡的问题。
 &lt;!--more--&gt;
-每次开机时都会报一堆错误，却不影响系统使用，这种情况从那次重装 Arch Linux 后就有了。
+每次开机时都会报一堆错误，却不影响系统使用。
 
 运行： `# journalctl -p err..alert` 得到结果是这样的（有删减）：
 
@@ -31,7 +30,7 @@ Buffer I/O error on dev sr1, logical block 512, async page read
 
 然而它不会自动安装 Linux 驱动程序。在 Linux 上，驱动程序可作为内核模块（Module）使用。虽然 Linux 内核里包含了我的网卡的驱动程序，但是由于网卡还是会被识别为一个光驱，我们需要用软件 usb_modeswitch 来把它切换成 Wifi 模式。这便是我以前写的一篇文章[《在 Linux 上使用无线网卡（网卡基于 RTL8188GU 芯片）》](https://ls-shandong.github.io/posts/2024-8-15-1/)的主要内容。
 
-显然,这个 */dev/sr1* 就是我的网卡，奇怪的是 /dev/sr0 和 /dev/sr1 都会启动时报 I/O 错误。您若是有什么见解可以在评论说出来。
+显然,这个 */dev/sr1* 就是我的网卡。奇怪的是 /dev/sr0 和 /dev/sr1 都会启动时报 I/O 错误，仍未解决。
 
 
 ---
