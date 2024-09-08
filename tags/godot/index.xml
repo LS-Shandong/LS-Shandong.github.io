@@ -1,0 +1,77 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Godot - 标签 - LS-Shandong 的博客</title>
+    <link>https://ls-shandong.github.io/tags/godot/</link>
+    <description>Godot - 标签 | LS-Shandong 的博客</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 08 Sep 2024 22:44:19 &#43;0800</lastBuildDate><atom:link href="https://ls-shandong.github.io/tags/godot/" rel="self" type="application/rss+xml" /><item>
+  <title>在 Wayland 环境下运行 Godot Engine</title>
+  <link>https://ls-shandong.github.io/posts/2024-9-08/</link>
+  <pubDate>Sun, 08 Sep 2024 22:44:19 &#43;0800</pubDate>
+  <author>LS-Shandong</author>
+  <guid>https://ls-shandong.github.io/posts/2024-9-08/</guid>
+  <description><![CDATA[<p>在 Wayland 环境下运行 Godot Engine。</p>
+<p>题外话：我好久没有更新这个博客了哈</p>
+<p>如题，我要在 Wayland 环境下运行官方仓库里的 Godot Engine。</p>
+<p>方法如下：</p>
+<p>复制 <code>/usr/share/applications/org.godotengine.Godot.desktop</code> 至 <code>$XDG_DATA_HOME/applications/</code>（例如 <code>~/.local/share/applications/</code>），文件内容如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Desktop Entry]
+</span></span><span class="line"><span class="cl">Name=Godot Engine
+</span></span><span class="line"><span class="cl">GenericName=Libre game engine
+</span></span><span class="line"><span class="cl">GenericName[el]=Ελεύθερη μηχανή παιχνιδιού
+</span></span><span class="line"><span class="cl">GenericName[fr]=Moteur de jeu libre
+</span></span><span class="line"><span class="cl">GenericName[nl]=Libre game-engine
+</span></span><span class="line"><span class="cl">GenericName[zh_CN]=自由的游戏引擎
+</span></span><span class="line"><span class="cl">Comment=Multi-platform 2D and 3D game engine with a feature-rich editor
+</span></span><span class="line"><span class="cl">Comment[el]=2D και 3D μηχανή παιχνιδιού πολλαπλών πλατφορμών με επεξεργαστή πλούσιο σε χαρακτηριστικά
+</span></span><span class="line"><span class="cl">Comment[fr]=Moteur de jeu 2D et 3D multiplateforme avec un éditeur riche en fonctionnalités
+</span></span><span class="line"><span class="cl">Comment[nl]=Multi-platform 2D- en 3d-game-engine met een veelzijdige editor
+</span></span><span class="line"><span class="cl">Comment[zh_CN]=多平台 2D 和 3D 游戏引擎，带有功能丰富的编辑器
+</span></span><span class="line"><span class="cl">Exec=godot %f
+</span></span><span class="line"><span class="cl">Icon=godot
+</span></span><span class="line"><span class="cl">Terminal=false
+</span></span><span class="line"><span class="cl">PrefersNonDefaultGPU=true
+</span></span><span class="line"><span class="cl">Type=Application
+</span></span><span class="line"><span class="cl">MimeType=application/x-godot-project;
+</span></span><span class="line"><span class="cl">Categories=Development;IDE;
+</span></span><span class="line"><span class="cl">StartupWMClass=Godot</span></span></code></pre></td></tr></table>
+</div>
+</div><p>编辑如下一行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">Exec=godot --display-driver wayland %f
+</span></span><span class="line"><span class="cl">...</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此方法仅适用于最新版本的 Godot Engine。</p>]]></description>
+</item>
+</channel>
+</rss>
