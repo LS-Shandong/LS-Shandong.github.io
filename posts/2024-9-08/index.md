@@ -2,8 +2,6 @@
 
 在 Wayland 环境下运行 Godot Engine。
 &lt;!--more--&gt;
-题外话：我好久没有更新这个博客了哈
-
 如题，我要在 Wayland 环境下运行官方仓库里的 Godot Engine。
 
 方法如下：

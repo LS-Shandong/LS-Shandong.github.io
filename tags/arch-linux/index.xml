@@ -1,243 +1,75 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Arch Linux - 标签 - LS-Shandong 的博客</title>
     <link>https://ls-shandong.github.io/tags/arch-linux/</link>
-    <description>Arch Linux - 标签 | LS-Shandong 的博客</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 08 Sep 2024 22:44:19 &#43;0800</lastBuildDate><atom:link href="https://ls-shandong.github.io/tags/arch-linux/" rel="self" type="application/rss+xml" /><item>
-  <title>在 Wayland 环境下运行 Godot Engine</title>
-  <link>https://ls-shandong.github.io/posts/2024-9-08/</link>
-  <pubDate>Sun, 08 Sep 2024 22:44:19 &#43;0800</pubDate>
-  <author>LS-Shandong</author>
-  <guid>https://ls-shandong.github.io/posts/2024-9-08/</guid>
-  <description><![CDATA[<p>在 Wayland 环境下运行 Godot Engine。</p>
-<p>题外话：我好久没有更新这个博客了哈</p>
-<p>如题，我要在 Wayland 环境下运行官方仓库里的 Godot Engine。</p>
-<p>方法如下：</p>
-<p>复制 <code>/usr/share/applications/org.godotengine.Godot.desktop</code> 至 <code>$XDG_DATA_HOME/applications/</code>（例如 <code>~/.local/share/applications/</code>），文件内容如下：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Desktop Entry]
-</span></span><span class="line"><span class="cl">Name=Godot Engine
-</span></span><span class="line"><span class="cl">GenericName=Libre game engine
-</span></span><span class="line"><span class="cl">GenericName[el]=Ελεύθερη μηχανή παιχνιδιού
-</span></span><span class="line"><span class="cl">GenericName[fr]=Moteur de jeu libre
-</span></span><span class="line"><span class="cl">GenericName[nl]=Libre game-engine
-</span></span><span class="line"><span class="cl">GenericName[zh_CN]=自由的游戏引擎
-</span></span><span class="line"><span class="cl">Comment=Multi-platform 2D and 3D game engine with a feature-rich editor
-</span></span><span class="line"><span class="cl">Comment[el]=2D και 3D μηχανή παιχνιδιού πολλαπλών πλατφορμών με επεξεργαστή πλούσιο σε χαρακτηριστικά
-</span></span><span class="line"><span class="cl">Comment[fr]=Moteur de jeu 2D et 3D multiplateforme avec un éditeur riche en fonctionnalités
-</span></span><span class="line"><span class="cl">Comment[nl]=Multi-platform 2D- en 3d-game-engine met een veelzijdige editor
-</span></span><span class="line"><span class="cl">Comment[zh_CN]=多平台 2D 和 3D 游戏引擎，带有功能丰富的编辑器
-</span></span><span class="line"><span class="cl">Exec=godot %f
-</span></span><span class="line"><span class="cl">Icon=godot
-</span></span><span class="line"><span class="cl">Terminal=false
-</span></span><span class="line"><span class="cl">PrefersNonDefaultGPU=true
-</span></span><span class="line"><span class="cl">Type=Application
-</span></span><span class="line"><span class="cl">MimeType=application/x-godot-project;
-</span></span><span class="line"><span class="cl">Categories=Development;IDE;
-</span></span><span class="line"><span class="cl">StartupWMClass=Godot</span></span></code></pre></td></tr></table>
-</div>
-</div><p>编辑如下一行：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">...
-</span></span><span class="line"><span class="cl">Exec=godot --display-driver wayland %f
-</span></span><span class="line"><span class="cl">...</span></span></code></pre></td></tr></table>
-</div>
-</div><p>此方法仅适用于最新版本的 Godot Engine。</p>]]></description>
-</item>
-<item>
-  <title>LaTeX 入门之软件安装</title>
-  <link>https://ls-shandong.github.io/posts/2024-8-26-1/</link>
-  <pubDate>Mon, 26 Aug 2024 11:46:40 &#43;0800</pubDate>
-  <author>LS-Shandong</author>
-  <guid>https://ls-shandong.github.io/posts/2024-8-26-1/</guid>
-  <description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/blogs/2024-8-26-1/2024-8-26-1-1.png" alt="LaTeX 入门之软件安装" title="LaTeX 入门之软件安装" referrerpolicy="no-referrer"/></div><p>我新建了一个合集“$\LaTeX$ 入门”，主要记录我入门 $\LaTeX$ 的过程。本文主要记录使用 $\LaTeX$ 所需的软件的安装。本文在实际上代替了<a href="https://ls-shandong.github.io/posts/2024-8-17-1/"target="_blank" rel="external nofollow noopener noreferrer">这篇文章的作用</a></p>
-<h2 id="需要知道的信息" class="heading-element"><span>需要知道的信息</span>
-  <a href="#%e9%9c%80%e8%a6%81%e7%9f%a5%e9%81%93%e7%9a%84%e4%bf%a1%e6%81%af" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><p>$\LaTeX$ 是一款流行的的排版系统，它基于 $\TeX$。要想使用 $\LaTeX$，我们需要一个 $\TeX$ 发行版和一个 $\TeX$ 编辑器。我选择了 $\TeX$ Live 发行版和 Kile 编辑器。</p>
-<p><a href="https://www.tug.org/texlive/"target="_blank" rel="external nofollow noopener noreferrer">$\TeX$ Live</a> 是一款流行的 $\TeX$ 发行版，它以年份作为发行版的版本号,保持一年一更的频率。一个 $\TeX$ 发行版是 $\TeX$ 排版引擎、支持排版的文件(基本格式、$\LaTeX$ 宏包、字体等)以
-及一些辅助工具的集合。</p>
-<p><a href="https://apps.kde.org/zh-cn/kile/"target="_blank" rel="external nofollow noopener noreferrer">Kile</a> 是一款由 <a href="https://kde.org/zh-cn/"target="_blank" rel="external nofollow noopener noreferrer">KDE</a> 开发的 $\TeX$/$\LaTeX$ 编辑器。<a href="https://kile.sourceforge.io"target="_blank" rel="external nofollow noopener noreferrer">Kile 官网</a>。</p>
-<h2 id="安装" class="heading-element"><span>安装</span>
-  <a href="#%e5%ae%89%e8%a3%85" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><h3 id="安装-tex-live" class="heading-element"><span>安装 $\TeX$ Live</span>
-  <a href="#%e5%ae%89%e8%a3%85-tex-live" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h3><p>在 <a href="https://archlinux.org"target="_blank" rel="external nofollow noopener noreferrer">Arch Linux</a> 安装 TeX Live 相当容易。有两种方法来安装 $\TeX$ Live。目前仅记录其中一种。</p>
-<h4 id="安装官方仓库里打包的-tex-live" class="heading-element"><span>安装官方仓库里打包的 $\TeX$ Live。</span>
-  <a href="#%e5%ae%89%e8%a3%85%e5%ae%98%e6%96%b9%e4%bb%93%e5%ba%93%e9%87%8c%e6%89%93%e5%8c%85%e7%9a%84-tex-live" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h4><p>通过此方法安装 $\TeX$ Live 的好处是安装完成后开箱即用，无需设置环境变量。
-<a href="https://archlinux.org/groups/x86_64/texlive/"target="_blank" rel="external nofollow noopener noreferrer">texlive</a> 包组包含大多数 $\TeX$ Live 包，根据上游集合进行分类。</p>
-<p><a href="https://archlinux.org/groups/x86_64/texlive-lang/"target="_blank" rel="external nofollow noopener noreferrer">texlive-lang</a> 包组包含为具有非拉丁字符的语言提供字符集和功能的包。一般来说，我们中国大陆的人安装 <a href="https://archlinux.org/groups/x86_64/texlive-langchinese/"target="_blank" rel="external nofollow noopener noreferrer">texlive-langchinese</a> 即可。</p>
-<p>所以我们通过运行一条命令来安装 $\TeX$ Live：</p>
-<p><code># pacman -S texlive texlive-langchinese</code></p>
-<div class="details admonition tip open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-lightbulb fa-fw" aria-hidden="true"></i>提示<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">如果你缺少特定的 <em>.sty</em> 文件，你可以运行 <code>pacman -F</code> 来找到提供它们的 Arch 包。</div>
-    </div>
-  </div>
-<h3 id="安装-kile" class="heading-element"><span>安装 Kile</span>
-  <a href="#%e5%ae%89%e8%a3%85-kile" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h3><p>运行以下命令以安装<a href="https://archlinux.org/packages/extra/x86_64/kile/"target="_blank" rel="external nofollow noopener noreferrer">官方仓库</a>里的 Kile：</p>
-<p><code># pacman -S kile</code></p>]]></description>
-</item>
-<item>
-  <title>Linux 启动时报错</title>
-  <link>https://ls-shandong.github.io/posts/2024-8-24-1/</link>
-  <pubDate>Sat, 24 Aug 2024 13:55:31 &#43;0800</pubDate>
-  <author>LS-Shandong</author>
-  <guid>https://ls-shandong.github.io/posts/2024-8-24-1/</guid>
-  <description><![CDATA[<p>每次开机时都会报一堆错误，却不影响系统使用。</p>
-<p>运行： <code># journalctl -p err..alert</code> 得到结果是这样的（有删减）：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">I/O error, dev sr1, sector 262128 op 0x0:(READ) flags 0x80700 phys_seg 1 prio class&gt;
-</span></span><span class="line"><span class="cl">I/O error, dev sr1, sector 262128 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 0
-</span></span><span class="line"><span class="cl">Buffer I/O error on dev sr1, logical block 32766, async page read
-</span></span><span class="line"><span class="cl">I/O error, dev sr1, sector 4096 op 0x0:(READ) flags 0x80700 phys_seg 1 prio class 0
-</span></span><span class="line"><span class="cl">I/O error, dev sr1, sector 4096 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 0
-</span></span><span class="line"><span class="cl">Buffer I/O error on dev sr1, logical block 512, async page read
-</span></span><span class="line"><span class="cl">I/O error, dev sr1, sector 260080 op 0x0:(READ) flags 0x80700 phys_seg 1 prio class&gt;
-</span></span><span class="line"><span class="cl">I/O error, dev sr1, sector 260080 op 0x0:(READ) flags 0x0 phys_seg 1 prio class 0
-</span></span><span class="line"><span class="cl">Buffer I/O error on dev sr1, logical block 32510, async page read
-</span></span><span class="line"><span class="cl">Buffer I/O error on dev sr1, logical block 512, async page read</span></span></code></pre></td></tr></table>
-</div>
-</div><p>看报错好像是光盘驱动器坏了。我确实有一个光盘驱动器，但是它是正常的，而且，关键的是，我的光盘驱动器是 <em>/dev/sr0</em> 而不是 <em>/dev/sr1</em>。</p>
-<p>运行 <code>ls /dev/</code> 发现 <em>/dev/</em> 目录下只有 <em>/dev/sr0</em>。</p>
-<p>运行 <code>udevadm info /dev/sr1</code> ，得到 <code>Unknown device &quot;/dev/sr1&quot;: No such device</code>。</p>
-<p>在 Arch Linux CN 的聊天群问了问，明白这是怎么回事了。</p>
-<p>有些无线网卡厂家，为了实现“免驱”效果，会把网卡模拟成一个光驱，然后把驱动程序放入模拟光驱中，再放个 autorun 文件，网卡就会在首次插入 <em>Windows</em> 电脑时自动安装驱动程序。</p>
-<p>然而它不会自动安装 Linux 驱动程序。在 Linux 上，驱动程序可作为内核模块（Module）使用。虽然 Linux 内核里包含了我的网卡的驱动程序，但是由于网卡还是会被识别为一个光驱，我们需要用软件 usb_modeswitch 来把它切换成 Wifi 模式。这便是我以前写的一篇文章<a href="https://ls-shandong.github.io/posts/2024-8-15-1/"target="_blank" rel="external nofollow noopener noreferrer">《在 Linux 上使用无线网卡（网卡基于 RTL8188GU 芯片）》</a>的主要内容。</p>
-<p>显然,这个 <em>/dev/sr1</em> 就是我的网卡。奇怪的是 /dev/sr0 和 /dev/sr1 都会启动时报 I/O 错误，仍未解决。</p>]]></description>
-</item>
-<item>
-  <title>给 tree 命令加上彩色输出</title>
-  <link>https://ls-shandong.github.io/posts/2024-8-22-2/</link>
-  <pubDate>Thu, 22 Aug 2024 15:32:34 &#43;0800</pubDate>
-  <author>LS-Shandong</author>
-  <guid>https://ls-shandong.github.io/posts/2024-8-22-2/</guid>
-  <description><![CDATA[<p>给 tree 命令加上彩色输出。</p>
-<p>默认安装的 Arch Linux 的 <em>ls</em> 命令是默认彩色输出的，而 <em>tree</em> 软件包提供的 tree  命令默认没有彩色输出。<em>ls</em> 有彩色输出是因为 Arch Linux 默认把 <em>ls</em> 设置为了 <code>ls --color=auto</code> 的别名，那么我们也采用这种方式。</p>
-<p>打开 <strong>~/.bashrc</strong> ，插入以下一行：</p>
-<p><code>alias tree='tree -C'</code></p>
-<p>然后注销再重新登录，此时再执行 tree 命令，就是彩色输出了。</p>]]></description>
-</item>
-<item>
-  <title>中文自由或开源游戏维基</title>
-  <link>https://ls-shandong.github.io/posts/2024-8-22-1/</link>
-  <pubDate>Thu, 22 Aug 2024 14:23:19 &#43;0800</pubDate>
-  <author>LS-Shandong</author>
-  <guid>https://ls-shandong.github.io/posts/2024-8-22-1/</guid>
-  <description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/blogs/2024-8-22-1/2024-8-22-1.png" alt="中文自由或开源游戏维基" title="中文自由或开源游戏维基" referrerpolicy="no-referrer"/></div><p>Libregamewiki 的中文翻译工作开始了。</p>
-<p>我从今年早些时候就提出要翻译 <a href="https://libregamewiki.org/Libregamewiki:Community_portal#Can_I_create_translation_pages_for_existing_articles_on_this_wiki?"target="_blank" rel="external nofollow noopener noreferrer">Libregamewiki</a>了（虽然这和 Arch Linux 中文维基<em>游戏列表</em>界面有点重复）,可是 Libregamewiki 的社区一直不回复,那我就自己做好了。可是我又没有一个适合托管 wiki 的服务器。就想到了<a href="https://readthedocs.com/"target="_blank" rel="external nofollow noopener noreferrer">Read the Docs</a>（虽然它不是专门用来写 wiki 的），现在已经<a href="https://chinese-libre-game-wiki.readthedocs.io"target="_blank" rel="external nofollow noopener noreferrer">部署上去了</a>。</p>
-<p>但是它现在仍然处于“毛坯”的状态，有兴趣做翻译工作的可以去 <a href="https://github.com/LS-Shandong/Chinese-libre-game-wiki"target="_blank" rel="external nofollow noopener noreferrer">Github</a> 提 Issues 或在本页下方评论。而且，我不会把工作重心转移至这上面来。</p>
-<div class="details admonition tip open">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-lightbulb fa-fw" aria-hidden="true"></i>提示<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">如果坚持不下去，我就会放弃这个项目。</div>
-    </div>
-  </div>]]></description>
-</item>
-<item>
-  <title>Arch Linux 上 LaTex 环境的安装与配置</title>
-  <link>https://ls-shandong.github.io/posts/2024-8-17-1/</link>
-  <pubDate>Sat, 17 Aug 2024 12:21:02 &#43;0800</pubDate>
-  <author>LS-Shandong</author>
-  <guid>https://ls-shandong.github.io/posts/2024-8-17-1/</guid>
-  <description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/blogs/2024-8-17-1/2024-8-17-1.png" alt="Arch Linux 上 LaTex 环境的安装与配置" title="Arch Linux 上 LaTex 环境的安装与配置" referrerpolicy="no-referrer"/></div><p>我们要使用 Latex,一般是要安装 Tex Live 和一个 Latex 编辑器，这在 Linux 上很容易实现。</p>
-<h2 id="安装" class="heading-element"><span>安装</span>
-  <a href="#%e5%ae%89%e8%a3%85" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><h2 id="安装-tex-live" class="heading-element"><span>安装 Tex Live</span>
-  <a href="#%e5%ae%89%e8%a3%85-tex-live" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><p>TeX Live 包括许多 Tex 引擎，如 pdfTex、XeTex、LuaTex。</p>
-<p>官方仓库里存在一个名为 <strong>texlive</strong> 的软件包组，其中包含了包含大多数 TeX Live 包，根据上游集合进行分类，还要安装 <strong>texlive-lang</strong> 以获得中文等语言的支持。</p>
-<p>此外，还可以安装 <strong>texlive-doc</strong> 以获得整个 TeX Live 文档和源文件。</p>
-<h2 id="安装编辑器" class="heading-element"><span>安装编辑器</span>
-  <a href="#%e5%ae%89%e8%a3%85%e7%bc%96%e8%be%91%e5%99%a8" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h2><p>我个人比较倾向于使用 <strong>TeXstudio</strong> 和 <strong>kile</strong>。直接从官方源安装即可。</p>
-<h3 id="texstudio-的配置" class="heading-element"><span>TeXstudio 的配置</span>
-  <a href="#texstudio-%e7%9a%84%e9%85%8d%e7%bd%ae" class="heading-mark">
-    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
-  </a>
-</h3><p>要启用 XeTex 以获得 Unicode 和现代字体技术支持,转至 <em><strong>选项 &gt; 设置TeXstudio &gt; 构建 &gt; 默认编译器</strong></em>。选择 <em>XeTex</em> 即可。</p>]]></description>
-</item>
-<item>
-  <title>在 Linux 上使用无线网卡（网卡基于RTL8188GU芯片）</title>
-  <link>https://ls-shandong.github.io/posts/2024-8-15-1/</link>
-  <pubDate>Thu, 15 Aug 2024 13:29:43 &#43;0800</pubDate>
-  <author>LS-Shandong</author>
-  <guid>https://ls-shandong.github.io/posts/2024-8-15-1/</guid>
-  <description><![CDATA[<div class="featured-image"><img loading="eager" src="/images/blogs/2024-8-15-1/2024-8-15-1.png" alt="在 Linux 上使用无线网卡（网卡基于RTL8188GU芯片）" title="我的无线网卡基于 RTL8188GU，需要安装 `usb_modeswitch` 以将其切换至 Wifi 模式（这个网络上资料不多） 。" referrerpolicy="no-referrer"/></div><p>我的网卡为<strong>迅捷150UH</strong>，我准备在我的 Arch Linux 上使用之。</p>
-<p>可运行 <code>lsusb</code> 命令以查询此网卡之芯片型号。lsusb 命令由软件包 <code>usbutils</code> 提供。</p>
-<pre><code>$ lsusb
-</code></pre>
-<p>经查询，我的无线网卡芯片型号为 <strong>RTL8188GU</strong>，<code>linux-firmware</code>软件包中已包含驱动程序 <code>rtl8xxxu</code> ，这一般无需手动装载，要装载：</p>
-<pre><code># modprobe rtl8xxxu
-</code></pre>
-<p>但是，我的无线网卡基于 RTL8188GU，需要安装 <code>usb_modeswitch</code> 以将其切换至 Wifi 模式（这个网络上资料不多） 。</p>
-<pre><code># pacman -S usb_modeswitch
-</code></pre>
-<p>无线网卡已可使用。</p>]]></description>
-</item>
-</channel>
+    <description>LS-Shandong 的博客</description>
+    <generator>Hugo 0.135.0 &amp; FixIt v0.3.11</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 08 Sep 2024 22:44:19 +0800</lastBuildDate>
+    <atom:link href="https://ls-shandong.github.io/tags/arch-linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Wayland 环境下运行 Godot Engine</title>
+      <link>https://ls-shandong.github.io/posts/2024-9-08/</link>
+      <pubDate>Sun, 08 Sep 2024 22:44:19 +0800</pubDate>
+      <guid>https://ls-shandong.github.io/posts/2024-9-08/</guid>
+      <category domain="https://ls-shandong.github.io/categories/linux/">Linux</category>
+      <category domain="https://ls-shandong.github.io/categories/%E8%BD%AF%E4%BB%B6/">软件</category>
+      <description>&lt;p&gt;在 Wayland 环境下运行 Godot Engine。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LaTeX 入门之软件安装</title>
+      <link>https://ls-shandong.github.io/posts/2024-8-26-1/</link>
+      <pubDate>Mon, 26 Aug 2024 11:46:40 +0800</pubDate>
+      <guid>https://ls-shandong.github.io/posts/2024-8-26-1/</guid>
+      <category domain="https://ls-shandong.github.io/categories/linux/">Linux</category>
+      <category domain="https://ls-shandong.github.io/categories/%E8%BD%AF%E4%BB%B6/">软件</category>
+      <description>&lt;p&gt;我新建了一个合集“$\LaTeX$ 入门”，主要记录我入门 $\LaTeX$ 的过程。本文主要记录使用 $\LaTeX$ 所需的软件的安装。本文在实际上代替了&lt;a href=&#34;https://ls-shandong.github.io/posts/2024-8-17-1/&#34;target=&#34;_blank&#34; rel=&#34;external nofollow noopener noreferrer&#34;&gt;这篇文章的作用&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Linux 启动时报错</title>
+      <link>https://ls-shandong.github.io/posts/2024-8-24-1/</link>
+      <pubDate>Sat, 24 Aug 2024 13:55:31 +0800</pubDate>
+      <guid>https://ls-shandong.github.io/posts/2024-8-24-1/</guid>
+      <category domain="https://ls-shandong.github.io/categories/%E7%A1%AC%E4%BB%B6/">硬件</category>
+      <category domain="https://ls-shandong.github.io/categories/linux/">Linux</category>
+      <description>Linux 启动时报错</description>
+    </item>
+    <item>
+      <title>给 tree 命令加上彩色输出</title>
+      <link>https://ls-shandong.github.io/posts/2024-8-22-2/</link>
+      <pubDate>Thu, 22 Aug 2024 15:32:34 +0800</pubDate>
+      <guid>https://ls-shandong.github.io/posts/2024-8-22-2/</guid>
+      <category domain="https://ls-shandong.github.io/categories/linux/">Linux</category>
+      <category domain="https://ls-shandong.github.io/categories/%E8%BD%AF%E4%BB%B6/">软件</category>
+      <description>&lt;p&gt;给 tree 命令加上彩色输出。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>中文自由或开源游戏维基</title>
+      <link>https://ls-shandong.github.io/posts/2024-8-22-1/</link>
+      <pubDate>Thu, 22 Aug 2024 14:23:19 +0800</pubDate>
+      <guid>https://ls-shandong.github.io/posts/2024-8-22-1/</guid>
+      <category domain="https://ls-shandong.github.io/categories/%E7%BF%BB%E8%AF%91/">翻译</category>
+      <category domain="https://ls-shandong.github.io/categories/linux/">Linux</category>
+      <description>&lt;p&gt;Libregamewiki 的中文翻译工作开始了。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Arch Linux 上 LaTex 环境的安装与配置</title>
+      <link>https://ls-shandong.github.io/posts/2024-8-17-1/</link>
+      <pubDate>Sat, 17 Aug 2024 12:21:02 +0800</pubDate>
+      <guid>https://ls-shandong.github.io/posts/2024-8-17-1/</guid>
+      <category domain="https://ls-shandong.github.io/categories/linux/">Linux</category>
+      <category domain="https://ls-shandong.github.io/categories/%E8%BD%AF%E4%BB%B6/">软件</category>
+      <description>&lt;p&gt;我们要使用 Latex,一般是要安装 Tex Live 和一个 Latex 编辑器，这在 Linux 上很容易实现。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在 Linux 上使用无线网卡（网卡基于RTL8188GU芯片）</title>
+      <link>https://ls-shandong.github.io/posts/2024-8-15-1/</link>
+      <pubDate>Thu, 15 Aug 2024 13:29:43 +0800</pubDate>
+      <guid>https://ls-shandong.github.io/posts/2024-8-15-1/</guid>
+      <category domain="https://ls-shandong.github.io/categories/linux/">Linux</category>
+      <category domain="https://ls-shandong.github.io/categories/%E7%A1%AC%E4%BB%B6/">硬件</category>
+      <description>我的无线网卡基于 RTL8188GU，需要安装 `usb_modeswitch` 以将其切换至 Wifi 模式（这个网络上资料不多） 。</description>
+    </item>
+  </channel>
 </rss>

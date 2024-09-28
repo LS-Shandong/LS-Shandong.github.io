@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Readings on LS-Shandong 的博客</title>
+    <title>所有reading - LS-Shandong 的博客</title>
     <link>https://ls-shandong.github.io/reading/</link>
-    <description>Recent content in Readings on LS-Shandong 的博客</description>
-    <generator>Hugo</generator>
+    <description>LS-Shandong 的博客</description>
+    <generator>Hugo 0.135.0 &amp; FixIt v0.3.11</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 18 Aug 2024 12:52:34 +0800</lastBuildDate>
     <atom:link href="https://ls-shandong.github.io/reading/index.xml" rel="self" type="application/rss+xml" />

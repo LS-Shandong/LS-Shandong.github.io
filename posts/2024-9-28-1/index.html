@@ -5,49 +5,48 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta name="robots" content="noodp" />
-    <title>在 Wayland 环境下运行 Godot Engine - LS-Shandong 的博客</title><meta name="author" content="LS-Shandong">
-<meta name="description" content="在 Wayland 环境下运行 Godot Engine。"><meta name="keywords" content='Godot, Arch Linux'>
-  <meta itemprop="name" content="在 Wayland 环境下运行 Godot Engine">
-  <meta itemprop="description" content="在 Wayland 环境下运行 Godot Engine。">
-  <meta itemprop="datePublished" content="2024-09-08T22:44:19+08:00">
-  <meta itemprop="dateModified" content="2024-09-08T22:44:19+08:00">
-  <meta itemprop="wordCount" content="425">
-  <meta itemprop="keywords" content="Godot,Arch Linux"><meta property="og:url" content="https://ls-shandong.github.io/posts/2024-9-08/">
+    <title>使用 Timeshift 备份系统 - LS-Shandong 的博客</title><meta name="author" content="LS-Shandong">
+<meta name="description" content="BTRFS 是一种现代的写时复制（COW）Linux 文件系统，Timeshift 可帮助定期创建文件系统的增量快照。"><meta name="keywords" content='Btrfs'>
+  <meta itemprop="name" content="使用 Timeshift 备份系统">
+  <meta itemprop="description" content="BTRFS 是一种现代的写时复制（COW）Linux 文件系统，Timeshift 可帮助定期创建文件系统的增量快照。">
+  <meta itemprop="datePublished" content="2024-09-28T13:52:41+08:00">
+  <meta itemprop="dateModified" content="2024-09-28T13:52:41+08:00">
+  <meta itemprop="wordCount" content="716">
+  <meta itemprop="keywords" content="Btrfs"><meta property="og:url" content="https://ls-shandong.github.io/posts/2024-9-28-1/">
   <meta property="og:site_name" content="LS-Shandong 的博客">
-  <meta property="og:title" content="在 Wayland 环境下运行 Godot Engine">
-  <meta property="og:description" content="在 Wayland 环境下运行 Godot Engine。">
+  <meta property="og:title" content="使用 Timeshift 备份系统">
+  <meta property="og:description" content="BTRFS 是一种现代的写时复制（COW）Linux 文件系统，Timeshift 可帮助定期创建文件系统的增量快照。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-09-08T22:44:19+08:00">
-    <meta property="article:modified_time" content="2024-09-08T22:44:19+08:00">
-    <meta property="article:tag" content="Godot">
-    <meta property="article:tag" content="Arch Linux">
+    <meta property="article:published_time" content="2024-09-28T13:52:41+08:00">
+    <meta property="article:modified_time" content="2024-09-28T13:52:41+08:00">
+    <meta property="article:tag" content="Btrfs">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="在 Wayland 环境下运行 Godot Engine">
-  <meta name="twitter:description" content="在 Wayland 环境下运行 Godot Engine。">
+  <meta name="twitter:title" content="使用 Timeshift 备份系统">
+  <meta name="twitter:description" content="BTRFS 是一种现代的写时复制（COW）Linux 文件系统，Timeshift 可帮助定期创建文件系统的增量快照。">
 <meta name="application-name" content="LS-Shandong 的博客">
 <meta name="apple-mobile-web-app-title" content="LS-Shandong 的博客"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://ls-shandong.github.io/posts/2024-9-08/" title="在 Wayland 环境下运行 Godot Engine - LS-Shandong 的博客" /><link rel="prev" type="text/html" href="https://ls-shandong.github.io/posts/2024-8-26-1/" title="LaTeX 入门之软件安装" /><link rel="next" type="text/html" href="https://ls-shandong.github.io/posts/2024-9-28-1/" title="使用 Timeshift 备份系统" /><link rel="alternate" type="text/markdown" href="https://ls-shandong.github.io/posts/2024-9-08/index.md" title="在 Wayland 环境下运行 Godot Engine - LS-Shandong 的博客"><link rel="stylesheet" href="/css/style.min.addc870e22d4b742a1206401e5f8d0b9c93b13de0689ca73299ce9733d04542d.css" integrity="sha256-rdyHDiLUt0KhIGQB5fjQuck7E94GicpzKZzpcz0EVC0="><link rel="preload" href="/lib/fontawesome-free/all.min.0934b1fc0d3a766d41d3adf5e7a115875e66e98ebba408d965a41cf3d2cb4ab5.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://ls-shandong.github.io/posts/2024-9-28-1/" title="使用 Timeshift 备份系统 - LS-Shandong 的博客" /><link rel="prev" type="text/html" href="https://ls-shandong.github.io/posts/2024-9-08/" title="在 Wayland 环境下运行 Godot Engine" /><link rel="alternate" type="text/markdown" href="https://ls-shandong.github.io/posts/2024-9-28-1/index.md" title="使用 Timeshift 备份系统 - LS-Shandong 的博客"><link rel="stylesheet" href="/css/style.min.addc870e22d4b742a1206401e5f8d0b9c93b13de0689ca73299ce9733d04542d.css" integrity="sha256-rdyHDiLUt0KhIGQB5fjQuck7E94GicpzKZzpcz0EVC0="><link rel="preload" href="/lib/fontawesome-free/all.min.0934b1fc0d3a766d41d3adf5e7a115875e66e98ebba408d965a41cf3d2cb4ab5.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.0934b1fc0d3a766d41d3adf5e7a115875e66e98ebba408d965a41cf3d2cb4ab5.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU="></noscript><link rel="preload" href="/lib/animate/animate.min.5fbaeb9f8e25d7e0143bae61d4b1802c16ce7390b96ceb2d498b0d96ff4c853f.css" integrity="sha256-X7rrn44l1+AUO65h1LGALBbOc5C5bOstSYsNlv9MhT8=" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/animate/animate.min.5fbaeb9f8e25d7e0143bae61d4b1802c16ce7390b96ceb2d498b0d96ff4c853f.css" integrity="sha256-X7rrn44l1+AUO65h1LGALBbOc5C5bOstSYsNlv9MhT8="></noscript><meta name="msvalidate.01" content="E136D3693489207BCB9E897E3170E47F" /><meta name="360-site-verification" content="5921dc90e9217511b4c255510f5b48aa" /><script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "在 Wayland 环境下运行 Godot Engine",
+    "headline": "使用 Timeshift 备份系统",
     "inLanguage": "zh-CN",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https:\/\/ls-shandong.github.io\/posts\/2024-9-08\/"
+      "@id": "https:\/\/ls-shandong.github.io\/posts\/2024-9-28-1\/"
     },"image": [{
               "@type": "ImageObject",
               "url": "https:\/\/ls-shandong.github.io\/images\/avatar.png",
               "width":  512 ,
               "height":  512 
-            }],"genre": "posts","keywords": "Godot, Arch Linux","wordcount":  425 ,
-    "url": "https:\/\/ls-shandong.github.io\/posts\/2024-9-08\/","datePublished": "2024-09-08T22:44:19+08:00","dateModified": "2024-09-08T22:44:19+08:00","publisher": {
+            }],"genre": "posts","keywords": "Btrfs","wordcount":  716 ,
+    "url": "https:\/\/ls-shandong.github.io\/posts\/2024-9-28-1\/","datePublished": "2024-09-28T13:52:41+08:00","dateModified": "2024-09-28T13:52:41+08:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
         "@type": "Person",
@@ -281,19 +280,54 @@
   <div class="search-dropdown mobile">
     <div id="search-dropdown-mobile"></div>
   </div><nav aria-label="breadcrumb" class="breadcrumb-container">
-    <ol class="breadcrumb"><li class="breadcrumb-item"><a href="/" title="LS-Shandong 的博客">主页</a></li><li class="breadcrumb-item"><a href="/posts/" title="Posts">文章</a></li><li class="breadcrumb-item active" aria-current="page">在 Wayland 环境下运行 Godot Engine</li>
+    <ol class="breadcrumb"><li class="breadcrumb-item"><a href="/" title="LS-Shandong 的博客">主页</a></li><li class="breadcrumb-item"><a href="/posts/" title="Posts">文章</a></li><li class="breadcrumb-item active" aria-current="page">使用 Timeshift 备份系统</li>
     </ol>
   </nav><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
 
   <article class="page single">
-    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>在 Wayland 环境下运行 Godot Engine</span>
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>使用 Timeshift 备份系统</span>
       </h1></div><div class="post-meta">
-      <div class="post-meta-line"><span class="post-author"><span class="author"><img loading="lazy" src="/images/avatar.png" alt="LS-Shandong" data-title="LS-Shandong" width="20" height="20" class="avatar" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&nbsp;LS-Shandong</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/linux/" class="post-category" title="分类 - Linux"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Linux</a>&ensp;<a href="/categories/%E8%BD%AF%E4%BB%B6/" class="post-category" title="分类 - 软件"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 软件</a> 和 </span></div><div class="post-meta-line"><span title="发布于 2024-09-08 22:44:19"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-09-08">2024-09-08</time></span>&nbsp;<span title="425 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 500 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 1 分钟</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="在 Wayland 环境下运行 Godot Engine"><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;次阅读
+      <div class="post-meta-line"><span class="post-author"><span class="author"><img loading="lazy" src="/images/avatar.png" alt="LS-Shandong" data-title="LS-Shandong" width="20" height="20" class="avatar" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/>&nbsp;LS-Shandong</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/linux/" class="post-category" title="分类 - Linux"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> Linux</a> 和 </span></div><div class="post-meta-line"><span title="发布于 2024-09-28 13:52:41"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-09-28">2024-09-28</time></span>&nbsp;<span title="716 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 800 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 2 分钟</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="使用 Timeshift 备份系统"><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;次阅读
           </span>&nbsp;</div>
-    </div><div class="content" id="content" data-end-flag="本文到此结束，欢迎继续浏览其它文章，您还可以订阅本博客 RSS 源"><p>在 Wayland 环境下运行 Godot Engine。</p>
-<p>如题，我要在 Wayland 环境下运行官方仓库里的 Godot Engine。</p>
-<p>方法如下：</p>
-<p>复制 <code>/usr/share/applications/org.godotengine.Godot.desktop</code> 至 <code>$XDG_DATA_HOME/applications/</code>（例如 <code>~/.local/share/applications/</code>），文件内容如下：</p>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#需要安装的软件包">需要安装的软件包</a></li>
+    <li><a href="#timeshift-配置">Timeshift 配置</a>
+      <ul>
+        <li><a href="#需要的分区配置">需要的分区配置</a></li>
+        <li><a href="#软件配置">软件配置</a></li>
+      </ul>
+    </li>
+    <li><a href="#timeshift-的-man-手册页翻译">Timeshift 的 man 手册页翻译</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content" data-end-flag="本文到此结束，欢迎继续浏览其它文章，您还可以订阅本博客 RSS 源"><p>BTRFS 是一种现代的写时复制（COW）Linux 文件系统，Timeshift 可帮助定期创建文件系统的增量快照。</p>
+<hr>
+<blockquote><p>摘自 Arch Linux 中文维基：</p>
+<p><em>Timeshift</em> 可帮助定期创建文件系统的增量快照，然后在以后恢复到这些快照，以撤销对系统的所有更改。</p>
+</blockquote><p>本文主要介绍 Timeshift 在 Arch Linux 上的配置（使用 Btrfs 文件系统的快照功能），仅供参考。</p>
+<h2 id="需要安装的软件包" class="heading-element"><span>需要安装的软件包</span>
+  <a href="#%e9%9c%80%e8%a6%81%e5%ae%89%e8%a3%85%e7%9a%84%e8%bd%af%e4%bb%b6%e5%8c%85" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>安装 <code>Timeshift</code> 软件包以获得 <em>Timeshift</em> 本体。</p>
+<p>可选：安装 <code>grub-btrfs</code> 软件包以在每次生成 GRUB 配置时向 GRUB 菜单添加快照。</p>
+<p>安装 <code>btrfs-progs</code> 以获得 Btrfs 分区基础操作所必须的工具。</p>
+<h2 id="timeshift-配置" class="heading-element"><span>Timeshift 配置</span>
+  <a href="#timeshift-%e9%85%8d%e7%bd%ae" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="需要的分区配置" class="heading-element"><span>需要的分区配置</span>
+  <a href="#%e9%9c%80%e8%a6%81%e7%9a%84%e5%88%86%e5%8c%ba%e9%85%8d%e7%bd%ae" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p><em>Timeshift</em> 需要驱动器 <em>/</em> 目录和 <em>/home</em> 目录分别使用 <em>@</em> 和 <em>@home</em> 子卷布局配置。</p>
+<p>所以我安装 Arch Linux 的时候是像这样分区的[仅针对根分区(/dev/sda6)]：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -316,64 +350,95 @@
 </span><span class="lnt">18
 </span><span class="lnt">19
 </span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Desktop Entry]
-</span></span><span class="line"><span class="cl">Name=Godot Engine
-</span></span><span class="line"><span class="cl">GenericName=Libre game engine
-</span></span><span class="line"><span class="cl">GenericName[el]=Ελεύθερη μηχανή παιχνιδιού
-</span></span><span class="line"><span class="cl">GenericName[fr]=Moteur de jeu libre
-</span></span><span class="line"><span class="cl">GenericName[nl]=Libre game-engine
-</span></span><span class="line"><span class="cl">GenericName[zh_CN]=自由的游戏引擎
-</span></span><span class="line"><span class="cl">Comment=Multi-platform 2D and 3D game engine with a feature-rich editor
-</span></span><span class="line"><span class="cl">Comment[el]=2D και 3D μηχανή παιχνιδιού πολλαπλών πλατφορμών με επεξεργαστή πλούσιο σε χαρακτηριστικά
-</span></span><span class="line"><span class="cl">Comment[fr]=Moteur de jeu 2D et 3D multiplateforme avec un éditeur riche en fonctionnalités
-</span></span><span class="line"><span class="cl">Comment[nl]=Multi-platform 2D- en 3d-game-engine met een veelzijdige editor
-</span></span><span class="line"><span class="cl">Comment[zh_CN]=多平台 2D 和 3D 游戏引擎，带有功能丰富的编辑器
-</span></span><span class="line"><span class="cl">Exec=godot %f
-</span></span><span class="line"><span class="cl">Icon=godot
-</span></span><span class="line"><span class="cl">Terminal=false
-</span></span><span class="line"><span class="cl">PrefersNonDefaultGPU=true
-</span></span><span class="line"><span class="cl">Type=Application
-</span></span><span class="line"><span class="cl">MimeType=application/x-godot-project;
-</span></span><span class="line"><span class="cl">Categories=Development;IDE;
-</span></span><span class="line"><span class="cl">StartupWMClass=Godot</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 格式化并挂载分区</span>
+</span></span><span class="line"><span class="cl">mkfs.btrfs /dev/sda6
+</span></span><span class="line"><span class="cl">mount /dev/sda6 /mnt
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建普通的子卷</span>
+</span></span><span class="line"><span class="cl">btrfs subvolume create /mnt/@
+</span></span><span class="line"><span class="cl">btrfs subvolume create /mnt/@home
+</span></span><span class="line"><span class="cl">btrfs subvolume create /mnt/@log
+</span></span><span class="line"><span class="cl">btrfs subvolume create /mnt/@pkg
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建 swap 子卷及 swap 文件</span>
+</span></span><span class="line"><span class="cl">btrfs subvolume create /mnt/swap
+</span></span><span class="line"><span class="cl">btrfs filesystem mkswapfile --size 8g --uuid clear /mnt/swap/swapfile
+</span></span><span class="line"><span class="cl"><span class="c1"># 启用 swap 文件</span>
+</span></span><span class="line"><span class="cl">swapon /mnt/swap/swapfile
+</span></span><span class="line"><span class="cl"><span class="c1"># 卸载分区</span>
+</span></span><span class="line"><span class="cl">umount /dev/sda6
+</span></span><span class="line"><span class="cl"><span class="c1"># 挂载分区(noatime、discard=async 与 compress=zstd 是可选的)</span>
+</span></span><span class="line"><span class="cl">mount /dev/sda6 /mnt -o <span class="nv">subvol</span><span class="o">=</span>@,noatime,discard<span class="o">=</span>async,compress<span class="o">=</span>zstd
+</span></span><span class="line"><span class="cl"><span class="c1"># 新建目录</span>
+</span></span><span class="line"><span class="cl">mkdir /mnt/home
+</span></span><span class="line"><span class="cl">mkdir -p /mnt/var/log
+</span></span><span class="line"><span class="cl">mkdir -p /mnt/var/cache/pacman/pkg
+</span></span><span class="line"><span class="cl"><span class="c1"># 挂载子卷(noatime、discard=async 与 compress=zstd 是可选的)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## 挂载 /home 目录</span>
+</span></span><span class="line"><span class="cl">mount /dev/sda6 /mnt/home -o <span class="nv">subvol</span><span class="o">=</span>@home,noatime,discard<span class="o">=</span>async,compress<span class="o">=</span>zstd
+</span></span><span class="line"><span class="cl"><span class="c1">## 挂载 /var/log 目录</span>
+</span></span><span class="line"><span class="cl">mount /dev/sda6 /mnt/var/log -o <span class="nv">subvol</span><span class="o">=</span>@log,noatime,discard<span class="o">=</span>async,compress<span class="o">=</span>zstd
+</span></span><span class="line"><span class="cl"><span class="c1">## 挂载 /var/cache/pacman/pkg 目录</span>
+</span></span><span class="line"><span class="cl">mount /dev/sda6 /mnt/var/cache/pacman/pkg -o <span class="nv">subvol</span><span class="o">=</span>@pkg,noatime,discard<span class="o">=</span>async,compress<span class="o">=</span>zstd
+</span></span><span class="line"><span class="cl"><span class="c1"># 因为我不希望 /var/log 和 /var/cache/pacman/pkg 在将来被保存快照，所以选择为这两个目录禁用写时复制：</span>
+</span></span><span class="line"><span class="cl">chattr +C /mnt/var/log
+</span></span><span class="line"><span class="cl">chattr +C /mnt/var/cache/pacman/pkg
+</span></span><span class="line"><span class="cl"><span class="c1"># 生成 fstab 文件</span>
+</span></span><span class="line"><span class="cl">genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</span></span></code></pre></td></tr></table>
 </div>
-</div><p>编辑如下一行：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">...
-</span></span><span class="line"><span class="cl">Exec=godot --display-driver wayland %f
-</span></span><span class="line"><span class="cl">...</span></span></code></pre></td></tr></table>
-</div>
-</div><p>此方法仅适用于最新版本的 Godot Engine。</p></div><div class="post-footer" id="post-footer">
+</div><h3 id="软件配置" class="heading-element"><span>软件配置</span>
+  <a href="#%e8%bd%af%e4%bb%b6%e9%85%8d%e7%bd%ae" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>按照向导设置，记得要启用 cronie 服务：</p>
+<pre><code># systemctl enable cronie.service --now
+</code></pre>
+<p><code>grub-btrfs</code> 软件包附带 <code>grub-btrfsd.service</code>，启用后可在创建新快照时自动更新 GRUB 配置。</p>
+<p>要使 <code>grub-btrfsd</code> 与 <code>Timeshift</code> 一起工作，请运行以下命令编辑服务：</p>
+<pre><code># systemctl edit --full grub-btrfsd
+</code></pre>
+<p>并将 <code>grub-btrfsd --syslog /.snapshots</code> 替换为 <code>grub-btrfsd --syslog -t</code>。 这样 grub-btrfs 就会监视 Timeshift 创建的快照。</p>
+<h2 id="timeshift-的-man-手册页翻译" class="heading-element"><span>Timeshift 的 man 手册页翻译</span>
+  <a href="#timeshift-%e7%9a%84-man-%e6%89%8b%e5%86%8c%e9%a1%b5%e7%bf%bb%e8%af%91" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>还没有开始……</p>
+<hr>
+<p>本文写得匆忙，有疏漏之处请指出。</p></div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
       <div class="post-info-mod">
-        <span title="更新于 2024-09-08 22:44:19">更新于 2024-09-08&nbsp;</span>
+        <span title="更新于 2024-09-28 13:52:41">更新于 2024-09-28&nbsp;</span>
       </div><div class="post-info-license">
             <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
           </div></div><div class="post-info-line">
-        <div class="post-info-md"><span><a href="/posts/2024-9-08/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span></div>
+        <div class="post-info-md"><span><a href="/posts/2024-9-28-1/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span></div>
         <div class="post-info-share">
-          <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://ls-shandong.github.io/posts/2024-9-08/" data-title="在 Wayland 环境下运行 Godot Engine"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
-  <a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="https://ls-shandong.github.io/posts/2024-9-08/" data-title="在 Wayland 环境下运行 Godot Engine"><svg class="icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Baidu</title><path d="M9.154.0C7.71.0 6.54 1.658 6.54 3.707c0 2.051 1.171 3.71 2.615 3.71 1.446.0 2.614-1.659 2.614-3.71C11.768 1.658 10.6.0 9.154.0zm7.025.594C14.86.58 13.347 2.589 13.2 3.927c-.187 1.745.25 3.487 2.179 3.735 1.933.25 3.175-1.806 3.422-3.364.252-1.555-.995-3.364-2.362-3.674a1.218 1.218.0 00-.261-.03zM3.582 5.535a2.811 2.811.0 00-.156.008c-2.118.19-2.428 3.24-2.428 3.24-.287 1.41.686 4.425 3.297 3.864 2.617-.561 2.262-3.68 2.183-4.362-.125-1.018-1.292-2.773-2.896-2.75zm16.534 1.753c-2.308.0-2.617 2.119-2.617 3.616.0 1.43.121 3.425 2.988 3.362s2.553-3.238 2.553-3.988c0-.745-.62-2.99-2.924-2.99zm-8.264 2.478c-1.424.014-2.708.925-3.323 1.947-1.118 1.868-2.863 3.05-3.112 3.363-.25.309-3.61 2.116-2.864 5.42.746 3.301 3.365 3.237 3.365 3.237s1.93.19 4.171-.31c2.24-.495 4.17.123 4.17.123s5.233 1.748 6.665-1.616c1.43-3.364-.808-5.109-.808-5.109s-2.99-2.306-4.736-4.798c-1.072-1.665-2.348-2.268-3.528-2.257zm-2.234 3.84 1.542.024v8.197H7.758c-1.47-.291-2.055-1.292-2.13-1.462-.072-.173-.488-.976-.268-2.343.635-2.049 2.447-2.196 2.447-2.196h1.81zm3.964 2.39v3.881c.096.413.612.488.612.488h1.614v-4.343h1.689v5.782h-3.915c-1.517-.39-1.59-1.465-1.59-1.465v-4.317zm-5.458 1.147c-.66.197-.978.708-1.05.928-.076.22-.247.78-.1 1.269.294 1.095 1.248 1.144 1.248 1.144h1.37v-3.34z"/></svg></a>
+          <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://ls-shandong.github.io/posts/2024-9-28-1/" data-title="使用 Timeshift 备份系统"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="https://ls-shandong.github.io/posts/2024-9-28-1/" data-title="使用 Timeshift 备份系统"><svg class="icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Baidu</title><path d="M9.154.0C7.71.0 6.54 1.658 6.54 3.707c0 2.051 1.171 3.71 2.615 3.71 1.446.0 2.614-1.659 2.614-3.71C11.768 1.658 10.6.0 9.154.0zm7.025.594C14.86.58 13.347 2.589 13.2 3.927c-.187 1.745.25 3.487 2.179 3.735 1.933.25 3.175-1.806 3.422-3.364.252-1.555-.995-3.364-2.362-3.674a1.218 1.218.0 00-.261-.03zM3.582 5.535a2.811 2.811.0 00-.156.008c-2.118.19-2.428 3.24-2.428 3.24-.287 1.41.686 4.425 3.297 3.864 2.617-.561 2.262-3.68 2.183-4.362-.125-1.018-1.292-2.773-2.896-2.75zm16.534 1.753c-2.308.0-2.617 2.119-2.617 3.616.0 1.43.121 3.425 2.988 3.362s2.553-3.238 2.553-3.988c0-.745-.62-2.99-2.924-2.99zm-8.264 2.478c-1.424.014-2.708.925-3.323 1.947-1.118 1.868-2.863 3.05-3.112 3.363-.25.309-3.61 2.116-2.864 5.42.746 3.301 3.365 3.237 3.365 3.237s1.93.19 4.171-.31c2.24-.495 4.17.123 4.17.123s5.233 1.748 6.665-1.616c1.43-3.364-.808-5.109-.808-5.109s-2.99-2.306-4.736-4.798c-1.072-1.665-2.348-2.268-3.528-2.257zm-2.234 3.84 1.542.024v8.197H7.758c-1.47-.291-2.055-1.292-2.13-1.462-.072-.173-.488-.976-.268-2.343.635-2.049 2.447-2.196 2.447-2.196h1.81zm3.964 2.39v3.881c.096.413.612.488.612.488h1.614v-4.343h1.689v5.782h-3.915c-1.517-.39-1.59-1.465-1.59-1.465v-4.317zm-5.458 1.147c-.66.197-.978.708-1.05.928-.076.22-.247.78-.1 1.269.294 1.095 1.248 1.144 1.248 1.144h1.37v-3.34z"/></svg></a>
   </span>
         </div>
       </div></div>
 
   <div class="post-info-more">
-    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/godot/" class="post-tag" title="标签 - Godot">Godot</a><a href="/tags/arch-linux/" class="post-tag" title="标签 - Arch Linux">Arch Linux</a></section>
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/btrfs/" class="post-tag" title="标签 - Btrfs">Btrfs</a></section>
     <section>
       <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
     </section>
-  </div><div class="post-nav"><a href="/posts/2024-8-26-1/" class="post-nav-item" rel="prev" title="LaTeX 入门之软件安装"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>LaTeX 入门之软件安装</a>
-      <a href="/posts/2024-9-28-1/" class="post-nav-item" rel="next" title="使用 Timeshift 备份系统">使用 Timeshift 备份系统<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+  </div><div class="post-nav"><a href="/posts/2024-9-08/" class="post-nav-item" rel="prev" title="在 Wayland 环境下运行 Godot Engine"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>在 Wayland 环境下运行 Godot Engine</a></div>
 </div>
 <div id="comments"><div id="giscus" class="comment">
           <script
@@ -400,7 +465,8 @@
           Please enable JavaScript to view the comments powered by <a href="https://giscus.app/" rel="external nofollow noopener noreferrer">giscus</a>.
         </noscript></div></article>
 
-  <aside class="toc" id="toc-auto" aria-label="目录"></aside></main><footer class="footer">
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
     <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.135.0"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.11"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
         </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
             <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
